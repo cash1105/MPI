@@ -19,10 +19,10 @@ MPI_Query_thread(&claimed);
    
 MPI_Get_processor_name(hostname, &len);
    
-printf ("Hello from task %d on %s!\n", taskid, hostname);
+printf ("Hello from task %d\n", taskid);
 printf("Query thred level= %d Init_thread level= %d\n Rank: %d\n Number of Process: %d\n", claimed,  provided, taskid, numtasks);
 if (taskid == MASTER)
-   printf("I'm the Master : Number of MPI tasks is: %d\n",numtasks);
+   printf("Yo soy el Maestro :%d,  Numero Total de Tareas: %d\n", taskid,numtasks);
 if(taskid%2 == 0)
    printf("Procesador:%s", hostname );
 MPI_Finalize();
